@@ -1,0 +1,3 @@
+"NAME","SRC","DST","PARAM"
+"Madeline's Filestream","M:\","U:\","/E /M /S /NP /R:0 /W:0"
+"Tom's Filestream","T:\","B:\","/E /M /S /NP /R:0 /W:0"
