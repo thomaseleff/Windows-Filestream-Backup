@@ -82,10 +82,10 @@ FOR /F "delims=, skip=1 tokens=1,2,3,4 usebackq" %%W IN ("%CONFIGPATH%") DO (
     ECHO Backing up !NAME!
     ECHO +!SEP!+
     ECHO.
-    ECHO     SRC    : !SRC!
-    ECHO     DST    : !DST!
-    ECHO     OPTION : !OPTION!
-    ECHO     LOG    : ~\logs\!NAME! Backup.log
+    ECHO     SRC   : !SRC!
+    ECHO     DST   : !DST!
+    ECHO     OPTION: !OPTION!
+    ECHO     LOG   : ~\logs\!NAME! Backup.log
     ECHO.
     ROBOCOPY !SRC! !DST! * !OPTION! /LOG:"!DIR!logs\!NAME! Backup.log"
     ECHO.
