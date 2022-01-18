@@ -2,7 +2,7 @@
 A batch script for backing-up any number of Windows directories using ROBOCOPY.
 
 # Features
-- File stream backup based on user-configuration
+- Filestream backup based on user-configuration
   - Configuration for the name of the filestream, the source directory, the destination directory and the copy options for the ROBOCOPY.
 - Logging of each filestream individually to easily review the status of the backup.
 
@@ -58,7 +58,7 @@ It is recommended to first run the Windows Filestream Backup manually in order t
       ```
       "C:/Batch Scripting/Filestream Backup/Backup_Filestream.bat"
       ```
-5. Once running, the batch script will execute each filestream backup in sequence, row-by-row, as defined in config.txt. To review the progress of each backup, review the output within the Command Prompt window. The Command Prompt window will close when the back-ups are complete.
+5. Once running, the batch script will execute each filestream backup in sequence, row-by-row, as defined in config.txt. To review the progress of each backup, review the output within the Command Prompt window. The Command Prompt window will close when the backups are complete.
 6. To verify that the Windows Filestream Backup completed successfully, navigate to the /logs sub-folder located in the directory where Backup_Filestream.bat was saved. Default directory below. Within /logs there should be a unique ".log" file for each filestream defined in config.txt. Review each ".log" file for the status of each filestream's folders and files.
    ```
    C:/Batch Scripting/Filestream Backup/logs
