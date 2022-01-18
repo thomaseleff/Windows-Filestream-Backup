@@ -38,7 +38,7 @@ config.txt contains the user-configured names of your filestreams, the source an
 To modify config.txt,
 1. Open config.txt in a text editor. 
 2. Modify existing rows or add new rows in or to config.txt for all filestreams you wish to backup, maintaining the comma-separated format.
-3. Each row requires four parameters, "NAME", "SRC", "DST" and "PARAM" (as indicated by the header row). These parameters are order dependent and must remain within the original order. Do not modify or remove the header row. Each parameter is described below.
+3. Each row requires four parameters, "NAME", "SRC", "DST" and "OPTION" (as indicated by the header row). These parameters are order dependent and must remain within the original order. Do not modify or remove the header row. Each parameter is described below.
    - NAME: Quoted string for the user-provided name of the filestream to be used for logging.
    - SRC: Windows directory path of the filestream to backup.
    - DST: Windows directory path of the filestream copy to be produced in the backup.
@@ -65,7 +65,7 @@ It is recommended to first run the Windows Filestream Backup manually in order t
    ```
 
 ### Scheduling Through Windows Task Scheduler to Run at a Cadence
-Once the AutoEq Device Manager is verified to be working successfully, create a new task in the Windows Task Scheduler to automatically run the AutoEq Device Manager at log-on.
+Once the Windows Filestream Backup is verified to be working successfully, create a new task in the Windows Task Scheduler to automatically run the Windows Filestream Backup at a cadence.
 
 1. Navigate to the search box in the Windows Taskbar.
 2. Search for "Command Prompt".
@@ -76,7 +76,7 @@ Once the AutoEq Device Manager is verified to be working successfully, create a 
 7. Within the "New Trigger" pop-up window, select "On a schedule" from the "Begin the task" drop-down options. Modify the "Settings" panel to select the cadence, day and time to repeat the backup.
 8. Click "OK".
 9. Within the "Actions" tab of the pop-up window, select "New".
-10. Within the "New Action" pop-up window, enter the following into the "Program/script" field.
+10. Within the "New Action" pop-up window, enter the following into the "Program/script" field. Default file path below is based on the default directory and filename.
 
       ```
       "C:/Batch Scripting/Filestream Backup/Backup_Filestream.bat"
@@ -84,7 +84,7 @@ Once the AutoEq Device Manager is verified to be working successfully, create a 
 11. Click "OK".
 12. Within the "Settings" tab of the pop-up, un-check the selection box next to the "Stop the task if it runs longer than" field.
 13. Click "OK".
-14. The newly created task should now appear within the Task Scheduler Library, and can be run manually by selecting the task, then by clicking Run within the "Actions" panel on the righ-hand side of the window.
+14. The newly created task should now appear within the Task Scheduler Library, and can be run manually by selecting the task, then by clicking Run within the "Actions" panel on the right-hand side of the window.
 
 # Attribution
 Batch scripting method for returning the length of a string was sourced from the following webpage [https://ss64.com/nt/syntax-strlen.html](https://ss64.com/nt/syntax-strlen.html).
