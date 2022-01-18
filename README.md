@@ -64,7 +64,7 @@ It is recommended to first run the Windows Filestream Backup manually in order t
    C:/Batch Scripting/Filestream Backup/logs
    ```
 
-### Scheduling Through Windows Task Scheduler to Run at Log-On
+### Scheduling Through Windows Task Scheduler to Run at a Cadence
 Once the AutoEq Device Manager is verified to be working successfully, create a new task in the Windows Task Scheduler to automatically run the AutoEq Device Manager at log-on.
 
 1. Navigate to the search box in the Windows Taskbar.
