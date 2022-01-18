@@ -45,8 +45,8 @@ FOR /F "delims=, skip=1 tokens=1,2,3,4 usebackq" %%W IN ("%CONFIGPATH%") DO (
     SET DST=%%Y
     SET DST=!DST:"=!
     SET DSTLAST=!DST:~-1!
-    SET PARAM=%%Z
-    SET PARAM=!PARAM:"=!
+    SET OPTION=%%Z
+    SET OPTION=!OPTION:"=!
     SET "SEP="
     CALL :STRLEN NAME NUM
     SET /A NUM=NUM+9
@@ -82,12 +82,12 @@ FOR /F "delims=, skip=1 tokens=1,2,3,4 usebackq" %%W IN ("%CONFIGPATH%") DO (
     ECHO Backing up !NAME!
     ECHO +!SEP!+
     ECHO.
-    ECHO     SRC   : !SRC!
-    ECHO     DST   : !DST!
-    ECHO     PARAM : !PARAM!
-    ECHO     LOG   : ~\logs\!NAME! Backup.log
+    ECHO     SRC    : !SRC!
+    ECHO     DST    : !DST!
+    ECHO     OPTION : !OPTION!
+    ECHO     LOG    : ~\logs\!NAME! Backup.log
     ECHO.
-    ROBOCOPY !SRC! !DST! * !PARAM! /LOG:"!DIR!logs\!NAME! Backup.log"
+    ROBOCOPY !SRC! !DST! * !OPTION! /LOG:"!DIR!logs\!NAME! Backup.log"
     ECHO.
     ECHO       NOTE: !NAME! backed up successfully.
     ECHO.
