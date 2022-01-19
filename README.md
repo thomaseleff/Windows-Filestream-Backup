@@ -1,9 +1,9 @@
 # Windows Filestream Backup
-A batch script for backing-up any number of Windows directories using ROBOCOPY.
+A batch script for backing-up any number of user-configured Windows directories using ROBOCOPY.
 
 # Features
 - Filestream backup based on user-configuration
-  - Configuration for the name of the filestream, the source directory, the destination directory and the copy options for the ROBOCOPY.
+  - Configuration for the name of the filestream, the source directory, the destination directory and the ROBOCOPY copy options.
 - Logging of each filestream individually to easily review the status of the backup.
 
 # Installation
@@ -20,14 +20,14 @@ The Windows Filestream Backup consists of two components,
 2. config.txt
 
 Navigate to [Backup_Filestream.bat](Backup_Filestream.bat), copying the contents into a ".bat" file within your file system. Example directory below.
-- File name **IS NOT** important.
+- File name _is not_ important.
 
    ```
    C:/Batch Scripting/Filestream Backup
    ```
 
 Navigate to [config.txt](config.txt), copying the contents into a file named "config.txt" within the same directory as Backup_Filestream.bat.
-- File name **IS** important, the file **MUST** be named config.txt.
+- File name _is_ important, the file _must_ be named config.txt.
 
 # Usage
 Configuring and running the Windows Filestream Backup.
